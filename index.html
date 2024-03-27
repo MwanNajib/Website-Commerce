@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--  -->
     <style>
         .custom-navbar {
             background-color: yellow;
@@ -29,6 +30,15 @@
         .social-icon {
             display: inline-block;
             margin: 0 5px;
+            background-color: l;
+        }
+
+        .accordion {
+            --bs-accordion-btn-bg: plum;
+            --bs-accordion-active-bg: salmon;
+            --bs-accordion-active-color: lavender;
+            --bs-accordion-btn-focus-box-shadow: none;
+            --bs-accordion-color: black ;
         }
     </style>
 </head>
@@ -120,6 +130,49 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="container my-5">
+    <div class="accordion" id="accordionExample">
+        <h2 class="fs-1 text-center mb-5">Frequently Asked Question</h2>
+        <div class="accordion-item ">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Apakah Makaroni Kapok-Kapok  hanya tersedia dalam satu level kepedasan ?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Kami menyediakan variasi kepedasan untuk memenuhi preferensi pelanggan. Anda dapat memilih level kepedasan yang sesuai dengan selera Anda, mulai dari pedas ringan hingga sangat pedas.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Bagaimana cara memesan produk Makaroni Kapok-Kapok  ?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Anda dapat memesan produk Makroni Kapok-Kapok dapat mengunjungi GoFood, GrabFood, ShopeeFood dan juga menelusuri katalog produk. Pilih varian Makroni Kapok-Kapok yang Anda inginkan, tambahkan ke keranjang belanja, dan ikuti langkah-langkah checkout untuk menyelesaikan pembelian.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Apakah ada program loyalitas atau promosi khusus untuk pembelian Makroni Kapok-Kapok secara berkala?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Kami mungkin menawarkan program loyalitas atau promosi khusus untuk pelanggan yang sering membeli Makroni Kapok-Kapok. Pastikan untuk bergabung dengan program loyalitas kami atau berlangganan newsletter kami untuk mendapatkan informasi terbaru tentang promosi dan penawaran spesial.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <section class="footer">
         <div class="container">
@@ -186,15 +239,9 @@
             </footer>
         </div>
     </section>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
-
 </html>
