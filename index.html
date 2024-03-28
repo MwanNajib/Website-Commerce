@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <!--  -->
     <style>
         .custom-navbar {
@@ -105,17 +110,160 @@
             --bs-accordion-active-bg: #ffb700;
             --bs-accordion-active-color: lavender;
             --bs-accordion-btn-focus-box-shadow: none;
-            --bs-accordion-color: black ;
+            --bs-accordion-color: black;
         }
 
         .carousel-item img {
-            width: 100%; 
-            height: auto; 
+            width: 100%;
+            height: auto;
             aspect-ratio: 1 / 1;
         }
-</style>
+
+        /* Testimoni */
+
+        .testimonials-section {
+            width: 100%;
+            padding: 0px 8%;
+        }
+
+        .testimonials-section .section-header {
+            max-width: 700px;
+            text-align: center;
+            margin: 30px auto 40px;
+        }
+
+        .section-header h1 {
+            position: relative;
+            font-size: 36px;
+            color: var(--primary-clr);
+        }
+
+        .testimonials-container {
+            position: relative;
+        }
+
+        .testimonials-container .testimonial-card {
+            padding: 20px;
+        }
+
+        .testimonial-card .test-card-body {
+            background-color: var(--card-clr);
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
+            padding: 20px;
+        }
+
+        .test-card-body .quote {
+            display: flex;
+            align-items: center;
+        }
+
+        .test-card-body .quote i {
+            font-size: 45px;
+            color: var(--heading-clr);
+            margin-right: 20px;
+        }
+
+        .test-card-body .quote h2 {
+            color: var(--heading-clr);
+        }
+
+        .test-card-body p {
+            margin: 10px 0px 15px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text-clr);
+        }
+
+        .test-card-body .ratings {
+            margin-top: 20px;
+        }
+
+        .test-card-body .ratings i {
+            font-size: 17px;
+            color: var(--primary-clr);
+            cursor: pointer;
+        }
+
+        .testimonial-card .profile {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .profile .profile-image {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .profile .profile-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile .profile-desc {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-desc span:nth-child(1) {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-clr);
+        }
+
+        .profile-desc span:nth-child(2) {
+            font-size: 15px;
+            color: var(--text-clr);
+        }
+
+        .owl-nav {
+            position: absolute;
+            right: 20px;
+            bottom: -10px;
+        }
+
+        .owl-nav button {
+            border-radius: 50% !important;
+        }
+
+        .owl-nav .owl-prev i,
+        .owl-nav .owl-next i {
+            padding: 10px !important;
+            border-radius: 50%;
+            font-size: 18px !important;
+            background-color: var(--card-clr) !important;
+            color: var(--primary-clr);
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .owl-nav .owl-prev i:hover,
+        .owl-nav .owl-next i:hover {
+            background-color: var(--primary-clr) !important;
+            color: #e9e9e9;
+        }
+
+        .owl-dots {
+            margin-top: 15px;
+        }
+
+        .owl-dots .owl-dot span {
+            background-color: #434753 !important;
+            padding: 6px !important;
+        }
+
+        .owl-dot.active span {
+            background-color: var(--primary-clr) !important;
+        }
+    </style>
     </style>
 </head>
+
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
@@ -155,10 +303,20 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-6">
                     <div class="text-wrapper">
-                        <p class="mbr-text mb-3 display-7 text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo nisi quis aliquet interdum. Maecenas efficitur purus a lorem bibendum, vitae luctus eros accumsan. Vivamus vulputate ipsum a odio vehicula, a consectetur felis tristique. Curabitur ullamcorper metus at turpis vestibulum, ut consequat velit varius. Morbi eget neque vel lectus malesuada aliquet nec et eros.</p></p>
-                        <p class="mbr-text display-7 text-left">Nam gravida velit non erat facilisis, nec ultricies dolor laoreet. Fusce vitae nisl ac sem aliquam vulputate ut vel purus. Nulla facilisi. Phasellus eget condimentum purus. Proin tincidunt massa vitae urna bibendum, sit amet vestibulum lacus ullamcorper. Integer sit amet ligula dui. Fusce accumsan velit id nulla euismod scelerisque.</p>
+                        <p class="mbr-text mb-3 display-7 text-left">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Phasellus commodo nisi quis aliquet interdum. Maecenas efficitur purus a lorem
+                            bibendum, vitae luctus eros accumsan. Vivamus vulputate ipsum a odio vehicula, a consectetur
+                            felis tristique. Curabitur ullamcorper metus at turpis vestibulum, ut consequat velit
+                            varius. Morbi eget neque vel lectus malesuada aliquet nec et eros.</p>
+                        </p>
+                        <p class="mbr-text display-7 text-left">Nam gravida velit non erat facilisis, nec ultricies
+                            dolor laoreet. Fusce vitae nisl ac sem aliquam vulputate ut vel purus. Nulla facilisi.
+                            Phasellus eget condimentum purus. Proin tincidunt massa vitae urna bibendum, sit amet
+                            vestibulum lacus ullamcorper. Integer sit amet ligula dui. Fusce accumsan velit id nulla
+                            euismod scelerisque.</p>
                         <div class="mbr-section-btn text-left">
-                            <a class="btn btn-success display-7" href="https://mobirise.com/extensions/code-editor/">Order Sekarang</a>
+                            <a class="btn btn-success display-7"
+                                href="https://mobirise.com/extensions/code-editor/">Order Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -166,7 +324,7 @@
         </div>
     </section>
     <br>
-    
+
     <!-- OUR SERVICES-->
     <section id="layanan-kami">
         <div class="container">
@@ -210,47 +368,225 @@
         </div>
     </section>
 
+    <!-- TESTIMONI -->
+    <div class="testimonials-section">
+        <header class="section-header">
+            <h1>TESTIMONI</h1>
+        </header>
+        <div class="owl-carousel owl-theme testimonials-container">
+            <div class="item testimonial-card">
+                <main class="test-card-body">
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i>
+                        <h2>MAKRONI KAPOK KAPOK</h2>
+                    </div>
+                    <p>Makaroni langganannnn enakkk bangett, dipack ukuran yg pas buat sekali makan , pengiriman ke
+                        jakarta amannn.</p>
+                    <div class="ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </main>
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="Assets/image1.jpg">
+                    </div>
+                    <div class="profile-desc">
+                        <span>Jamal</span>
+                        <span>@jamal</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item testimonial-card">
+                <main class="test-card-body">
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i>
+                        <h2>MAKRONI KAPOK KAPOK</h2>
+                    </div>
+                    <p>Dulu langgananku pas masih kos di Gemah. Suka banget karena enak & harganya ekonomis, apalagi
+                        makaroninya yg dikemas mini. Jadi bisa jajan banyak rasa sekaligus. Untung ada di Shopee jadi
+                        rasa kangen bisa terobati 🥰.</p>
+                    <div class="ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </main>
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="Assets/image2.jpg">
+                    </div>
+                    <div class="profile-desc">
+                        <span>Cia</span>
+                        <span>@cia</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item testimonial-card">
+                <main class="test-card-body">
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i>
+                        <h2>MAKRONI KAPOK KAPOK</h2>
+                    </div>
+                    <p>Sudah sering bgt beli makroni disini.. enak bgt.. rasanya juga pas pedesnya asinnya pas bgt..
+                        cocok untuk temen santai.</p>
+                    <div class="ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </main>
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="Assets/image3.jpg">
+                    </div>
+                    <div class="profile-desc">
+                        <span>Faris</span>
+                        <span>@faris</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item testimonial-card">
+                <main class="test-card-body">
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i>
+                        <h2>MAKRONI KAPOK KAPOK</h2>
+                    </div>
+                    <p>Udah beberapa kali beli pas masih kerja di Tembalang jadi sudah tidak diragukan lagi kualitas dan
+                        rasanya, thanks seller.</p>
+                    <div class="ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </main>
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="Assets/image4.jpg">
+                    </div>
+                    <div class="profile-desc">
+                        <span>Hanabi</span>
+                        <span>@hanabi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item testimonial-card">
+                <main class="test-card-body">
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i>
+                        <h2>MAKRONI KAPOK KAPOK</h2>
+                    </div>
+                    <p>Mantaaaap betuuuull, rasanya selalu tetap enak, pedesnya nampol, respon penjuual baik, pengiriman
+                        cepat, packing rapi, jajanan kenangan waktu kuliah. Joos gandos ntar kalo abis mau order lagi
+                        👍🏻👍🏻👍🏻🤤🤤🤤.</p>
+                    <div class="ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </main>
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="Assets/image5.jpg">
+                    </div>
+                    <div class="profile-desc">
+                        <span>Layla</span>
+                        <span>@layla</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item testimonial-card">
+                <main class="test-card-body">
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i>
+                        <h2>MAKRONI KAPOK KAPOK</h2>
+                    </div>
+                    <p>Yg kemasan kecil enak di bawa kemana"
+                        Pas buat di bawa pergi
+                        Hehe.</p>
+                    <div class="ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </main>
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="Assets/image6.jpg">
+                    </div>
+                    <div class="profile-desc">
+                        <span>Indra</span>
+                        <span>@indra</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- FAQ -->
     <section class="container my-5">
-    <div class="accordion" id="accordionExample">
-        <h2 class="fs-1 text-center mb-4">Frequently Asked Question</h2>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Apakah Makaroni Kapok-Kapok  hanya tersedia dalam satu level kepedasan ?
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Kami menyediakan variasi kepedasan untuk memenuhi preferensi pelanggan. Anda dapat memilih level kepedasan yang sesuai dengan selera Anda, mulai dari pedas ringan hingga sangat pedas.
+        <div class="accordion" id="accordionExample">
+            <h2 class="fs-1 text-center mb-4">Frequently Asked Question</h2>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Apakah Makaroni Kapok-Kapok hanya tersedia dalam satu level kepedasan ?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Kami menyediakan variasi kepedasan untuk memenuhi preferensi pelanggan. Anda dapat memilih level
+                        kepedasan yang sesuai dengan selera Anda, mulai dari pedas ringan hingga sangat pedas.
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Bagaimana cara memesan produk Makaroni Kapok-Kapok  ?
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Anda dapat memesan produk Makroni Kapok-Kapok dapat mengunjungi GoFood, GrabFood, ShopeeFood dan juga menelusuri katalog produk. Pilih varian Makroni Kapok-Kapok yang Anda inginkan, tambahkan ke keranjang belanja, dan ikuti langkah-langkah checkout untuk menyelesaikan pembelian.
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Bagaimana cara memesan produk Makaroni Kapok-Kapok ?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Anda dapat memesan produk Makroni Kapok-Kapok dapat mengunjungi GoFood, GrabFood, ShopeeFood dan
+                        juga menelusuri katalog produk. Pilih varian Makroni Kapok-Kapok yang Anda inginkan, tambahkan
+                        ke keranjang belanja, dan ikuti langkah-langkah checkout untuk menyelesaikan pembelian.
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Apakah ada program loyalitas atau promosi khusus untuk pembelian Makroni Kapok-Kapok secara berkala?
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Kami mungkin menawarkan program loyalitas atau promosi khusus untuk pelanggan yang sering membeli Makroni Kapok-Kapok. Pastikan untuk bergabung dengan program loyalitas kami atau berlangganan newsletter kami untuk mendapatkan informasi terbaru tentang promosi dan penawaran spesial.
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Apakah ada program loyalitas atau promosi khusus untuk pembelian Makroni Kapok-Kapok secara
+                        berkala?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Kami mungkin menawarkan program loyalitas atau promosi khusus untuk pelanggan yang sering
+                        membeli Makroni Kapok-Kapok. Pastikan untuk bergabung dengan program loyalitas kami atau
+                        berlangganan newsletter kami untuk mendapatkan informasi terbaru tentang promosi dan penawaran
+                        spesial.
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
 
@@ -277,9 +613,11 @@
                     <div class="col-6 col-md-2 mb-3">
                         <h5>Social Media</h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="instagram.com/kapok.kapok" class="nav-link p-0 text-muted">Instagram</a></li>
+                            <li class="nav-item mb-2"><a href="instagram.com/kapok.kapok"
+                                    class="nav-link p-0 text-muted">Instagram</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">TikTok</a></li>
-                            <li class="nav-item mb-2"><a href="facebook.com/kapokkapokmakaroni" class="nav-link p-0 text-muted">Facebook</a></li>
+                            <li class="nav-item mb-2"><a href="facebook.com/kapokkapokmakaroni"
+                                    class="nav-link p-0 text-muted">Facebook</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">WA</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Shopee</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lazada</a></li>
@@ -326,9 +664,19 @@
             </footer>
         </div>
     </section>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
