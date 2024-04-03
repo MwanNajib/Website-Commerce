@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.navbar').hide().slideDown('smooth');
 
-    $('.orders-btn').click(function() {
+    $('.order-btn').click(function() {
         $('html, body').animate({
             scrollTop: $('#produk').offset().top
         }, 500);
@@ -9,9 +9,27 @@ $(document).ready(function () {
 
     $('.promo-btn').click(function() {
         $('html, body').animate({
-            scrollTop: $('#promo').offset().top
+            scrollTop: $('#layanan-kami').offset().top
         }, 500);
     });
+
+    $(".card-promo").hover(
+        function() {
+            $(this).css("border-color", "#ffc107"); 
+            $(this).css("box-shadow", "0 0 20px rgba(0, 0, 0, 0.1)"); 
+        },
+        function() {
+            $(this).css("border-color", ""); 
+            $(this).css("box-shadow", ""); 
+        }
+    );
+    
+    $('.btn-promo').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#produk').offset().top
+        }, 500);
+    });
+
 });
 
 document.querySelector('.order-btn').addEventListener('click', function() {
