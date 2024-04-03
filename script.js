@@ -1,5 +1,17 @@
 $(document).ready(function () {
     $('.navbar').hide().slideDown('smooth');
+
+    $('.orders-btn').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#produk').offset().top
+        }, 500);
+    });
+
+    $('.promo-btn').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#promo').offset().top
+        }, 500);
+    });
 });
 
 document.querySelector('.order-btn').addEventListener('click', function() {
@@ -18,16 +30,6 @@ window.addEventListener('scroll', function() {
     } else {
         document.getElementById('heroes').classList.add('fadeout');
     }
-});
-
-$(document).ready(function() {
-    $('.order-btn').click(function() {
-        var produkTop = $('#produk').offset().top;
-
-        $('html, body').animate({
-            scrollTop: produkTop
-        }, 800);
-    });
 });
 
 
@@ -56,5 +58,5 @@ $('.testimonials-container').owlCarousel({
             items: 2
         },
     }
-})
+});
 

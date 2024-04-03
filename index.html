@@ -18,6 +18,7 @@
 
     <!--  -->
     <style>
+
         .navbar-nav a {
             font-size: 14px;
             text-transform: uppercase;
@@ -28,8 +29,8 @@
             background-color: yellow;
         }
 
-        /* Hero Style */
-        #heroes {
+                /* Hero Style */
+                #heroes {
             background: linear-gradient(180deg, #FFFF00 0%, #ffffff 100%);
             transition: 0.5s ease-in-out;
             padding: 100px 0;
@@ -45,8 +46,8 @@
             position: relative;
             height: 650px;
         }
-
-        s .parallax-img {
+s
+        .parallax-img {
             width: 100%;
             transition: transform 0.5s ease;
             border-radius: 10px;
@@ -60,81 +61,68 @@
         h1 {
             color: #333;
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: clip;
-            max-width: 100%;
+            overflow: hidden; 
+            text-overflow: clip; 
+            max-width: 100%; 
         }
 
         .order-btn {
-            background-color: #ffc107;
-            color: #333;
-            border: none;
-            transition: all 0.3s ease;
-        }
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    transition: all 0.3s ease;
+}
 
-        .order-btn:hover {
-            background-color: #ffca28;
-            transform: scale(1.05);
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-        }
+.order-btn:hover {
+    background-color: #ffca28; 
+    transform: scale(1.05); 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
 
-        .card-promo {
-            background-color: lemonchiffon;
-        }
+        /* PROMO */   
+    #promo {
+        background-color: #ffffff; 
+        padding: 60px 0; 
+    }
 
-        .card-img-wrapper {
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+    .card-promo {
+        border: none; 
+        border-radius: 10px;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); 
+        transition: all 0.3s ease; 
+    }
 
-        .card-img-wrapper img {
-            display: block;
-            max-width: 100%;
-            max-height: 100%;
-            transition: transform 0.3s ease;
-        }
+    .card-promo:hover {
+        transform: translateY(-5px); /
+        box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+    }
 
-        .card-img-wrapper:hover img {
-            transform: scale(1.1);
-            cursor: pointer;
-            z-index: 1;
-        }
+    .card-title-promo {
+        color: #212529; 
+        font-weight: bold; 
+        margin-bottom: 15px; 
+    }
 
-        .card-img-wrapper::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
+    .card-text-promo {
+        color: #6c757d; 
+        margin-bottom: 20px; 
+    }
 
-        .card-img-wrapper:hover::before {
-            opacity: 1;
-        }
+    .btn-promo {
+        background-color: #ffc107; 
+        color: #212529;
+        border: none;
+        border-radius: 5px; 
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.3s ease; 
+    }
 
-        .card-img-wrapper::after {
-            content: '\f03e';
-            /* Unicode for zoom-in icon */
-            font-family: FontAwesome;
-            font-size: 2rem;
-            color: #fff;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .card-img-wrapper:hover::after {
-            opacity: 1;
-        }
-
+    .btn-promo:hover {
+        background-color: #ffca2c; 
+        color: #212529; 
+    }
+    /* FAQ */
         .accordion {
             --bs-accordion-btn-bg: #ffff00;
             --bs-accordion-active-bg: black;
@@ -453,27 +441,26 @@
 
 
     <!-- HEROES -->
-    <section id="heroes"class="p-5">
-        <div class="container">
+    <section id="heroes">
+        <div class="container col-xxl-9 px-3">
             <div class="row flex-lg-row-reverse align-items-center g-5">
-                <div class="col-lg-6">
+                <div class="col-10 col-sm-8 col-lg-6">
                     <div class="parallax-wrapper">
-                        <img src="Assets/makaroni.png" class="d-block mx-lg-auto img-fluid parallax-img" alt="makaroni">
+                        <img src="Assets/makaroni.png" class="d-block mx-lg-auto img-fluid parallax-img" alt="makaroni" width="600" height="950" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-3 mb-3" style="font-size: 65px;">Makaroni</h1>
-                    <h1 class="display-5 fw-bold lh-3 mb-3" style="font-size: 65px;">Kapok-kapok</h1>
-                    <p class="lead mb-4" style="font-size: 20px; color: #666;">Rasa Asli, kelezatan tak tertandingi.
+                    <h1 class="display-5 fw-bold lh-3 mb-3" style="font-size: 65px; letter-spacing: 3px;">MAKARONI</h1>
+                    <h1 class="display-5 fw-bold lh-3 mb-3" style="font-size: 65px;">KAPOK-KAPOK</h1>
+                    <p class="lead" style="font-size: 20px; color: #666;">Rasa Asli, kelezatan tak tertandingi.
                         Makaroni Kapok-kapok akan membuat Anda ketagihan terus menerus!!!</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start align-items-center">
-                        <button type="button" class="btn btn-warning btn-lg px-7 py-3 me-md-2 orders-btn"><i
-                                class="fas fa-shopping-cart me-2"></i>Tentang Kami</button>
+                        <button type="button" class="btn btn-warning btn-lg px-7 py-3 me-md-2 order-btn"><i class="fas fa-shopping-cart me-2"></i>Tentang Kami</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
     <!-- END HEROES -->
 
 
@@ -578,7 +565,7 @@
     <!-- SPECIAL PRODUCT -->
     <section id="produk">
         <div class="produk" id="produk">
-            <h2 class="mbr-section-title display-2 mbr-bold text-center">Our Products</h2>
+            <h2 class="mbr-section-title display-2 mbr-bold text-center">Produk Kami</h2>
             <div class="produk-container">
 
                 <!-- box 1 -->
@@ -638,39 +625,39 @@
     </section>
 
     <!-- PROMO -->
-    <section id="promo">
+    <section id="promo" class="py-5">
         <div class="container">
-            <h2 class="mbr-section-title display-2 mbr-bold text-center">Promo</h2>
-            <p class="text-center">Rayakan Hari-Hari Spesial dengan Keseruan Lezat! Dapatkan Penawaran Istimewa untuk
-                Makaroni Kapok-Kapok di Setiap Momennya.</p>
+            <h2 class="mbr-section-title display-2 mbr-bold text-center">Promo Spesial</h2>
             <div class="row">
-                <div class="col-md-3 mx-auto">
-                    <div class="card-promo">
-                        <div class="card-img-wrapper">
-                            <img class="card-img-top" src="Assets/promo1.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <button class="btn btn-sm btn-warning btn-block">Promo Menarik!</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mx-auto">
-                    <div class="card-promo">
-                        <div class="card-img-wrapper">
-                            <img class="card-img-top" src="Assets/promo2.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <button class="btn btn-sm btn-warning btn-block">Promo Menarik!</button>
+                <div class="col-lg-6 mb-4">
+                    <div class="card-promo mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="Assets/promo2.png" class="card-img mt-2 mb-2" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h4 class="card-title-promo" style="font-size: 23px;"><i class="fas fa-tags"></i> Promo Lebaran</h4>
+                                    <p class="card-text-promo" style="font-size: 15px;">Rayakan Hari Spesial Anda dengan pilihan paket terbaik dari kami!</p>
+                                    <button type="button" class="btn btn-warning btn-lg btn-promo"><i class="fas fa-info-circle"></i> Info Selengkapnya</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mx-auto">
-                    <div class="card-promo">
-                        <div class="card-img-wrapper">
-                            <img class="card-img-top" src="Assets/promo3.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <button class="btn btn-sm btn-warning btn-block">Promo Menarik!</button>
+                <div class="col-lg-6 mb-4">
+                    <div class="card-promo mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="Assets/promo3.png" class="card-img mt-2 mb-2" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h4 class="card-title-promo" style="font-size: 23px;"><i class="fas fa-tags"></i> Promo Lebaran</h4>
+                                    <p class="card-text-promo" style="font-size: 15px;">Rayakan Hari Spesial Anda dengan pilihan paket terbaik dari kami!</p>
+                                    <button type="button" class="btn btn-warning btn-lg btn-promo"><i class="fas fa-info-circle"></i> Info Selengkapnya</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -680,9 +667,7 @@
 
     <!-- TESTIMONI -->
     <div class="testimonials-section" id="testimoni">
-        <header class="section-header">
-            <h1>TESTIMONI</h1>
-        </header>
+        <h2 class="mbr-section-title display-2 mbr-bold text-center">Testimoni</h2>
         <div class="owl-carousel owl-theme testimonials-container">
             <div class="item testimonial-card">
                 <main class="test-card-body">
@@ -847,9 +832,9 @@
     </div>
 
     <!-- FAQ -->
-    <section class="container my-5">
+    <section class="container py-5">
         <div class="accordion" id="accordionExample">
-            <h2 class="fs-1 text-center mb-4">Frequently Asked Question</h2>
+            <h2 class="mbr-section-title display-2 mbr-bold text-center">Frequently Asked Question</h2>
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -975,7 +960,7 @@
                             style="width: 65px; "></a>
                     <a href="#" class="social-icon"><img src="https://i.ibb.co/dGD1q1t/sosmed1.png" alt="Instagram"
                             style="width: 65px;"></a>
-                    <h1><br><br>_ </h1>
+                            <h1><br><br>_ </h1>
                 </div>
             </div>
             <br>
