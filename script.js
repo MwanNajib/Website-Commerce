@@ -1,3 +1,11 @@
+$(document).ready(function () {
+    $('.navbar').hide().slideDown('smooth');
+});
+
+$(document).ready(function () {
+    $("#fadeInDiv").hide().fadeIn(1000);
+});
+
 $('.testimonials-container').owlCarousel({
     loop: true,
     autoplay: true,
