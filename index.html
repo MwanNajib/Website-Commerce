@@ -44,7 +44,7 @@
         .parallax-wrapper {
             overflow: hidden;
             position: relative;
-            height: 650px;
+            height: 550px;
         }
 s
         .parallax-img {
@@ -93,8 +93,11 @@ s
     }
 
     .card-promo:hover {
-        transform: translateY(-5px); /
+        transform: translateY(-5px); 
         box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+        border-color: #ffc107;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s ease, box-shadow 0.3s ease; 
     }
 
     .card-title-promo {
@@ -441,7 +444,7 @@ s
 
 
     <!-- HEROES -->
-    <section id="heroes">
+    <section id="heroes" class="py-5">
         <div class="container col-xxl-9 px-3">
             <div class="row flex-lg-row-reverse align-items-center g-5">
                 <div class="col-10 col-sm-8 col-lg-6">
@@ -456,12 +459,54 @@ s
                         Makaroni Kapok-kapok akan membuat Anda ketagihan terus menerus!!!</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start align-items-center">
                         <button type="button" class="btn btn-warning btn-lg px-7 py-3 me-md-2 order-btn"><i class="fas fa-shopping-cart me-2"></i>Tentang Kami</button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg px-7 py-3 me-md-2 promo-btn"><i class="fas fa-truck me-2"></i></i>Pesan Produk</button>
                     </div>
                 </div>
             </div>
         </div>
     </section> 
     <!-- END HEROES -->
+
+     <!-- PROMO -->
+     <section id="promo" class="py-5">
+        <div class="container">
+            <h2 class="mbr-section-title display-2 mbr-bold text-center">Promo Spesial</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card-promo mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="Assets/promo2.png" class="card-img mt-2 mb-2" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h4 class="card-title-promo" style="font-size: 23px;"><i class="fas fa-tags"></i> Promo Lebaran</h4>
+                                    <p class="card-text-promo" style="font-size: 15px;">Rayakan Hari Spesial Anda dengan pilihan paket terbaik dari kami!</p>
+                                    <button type="button" class="btn btn-warning btn-lg btn-promo"><i class="fas fa-info-circle"></i> Info Selengkapnya</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card-promo mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="Assets/promo3.png" class="card-img mt-2 mb-2" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h4 class="card-title-promo" style="font-size: 23px;"><i class="fas fa-tags"></i> Promo Lebaran</h4>
+                                    <p class="card-text-promo" style="font-size: 15px;">Rayakan Hari Spesial Anda dengan pilihan paket terbaik dari kami!</p>
+                                    <button type="button" class="btn btn-warning btn-lg btn-promo"><i class="fas fa-info-circle"></i> Info Selengkapnya</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- ABOUT US -->
@@ -624,47 +669,7 @@ s
         </div>
     </section>
 
-    <!-- PROMO -->
-    <section id="promo" class="py-5">
-        <div class="container">
-            <h2 class="mbr-section-title display-2 mbr-bold text-center">Promo Spesial</h2>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card-promo mb-3" style="max-width: 540px;">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="Assets/promo2.png" class="card-img mt-2 mb-2" alt="">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="card-title-promo" style="font-size: 23px;"><i class="fas fa-tags"></i> Promo Lebaran</h4>
-                                    <p class="card-text-promo" style="font-size: 15px;">Rayakan Hari Spesial Anda dengan pilihan paket terbaik dari kami!</p>
-                                    <button type="button" class="btn btn-warning btn-lg btn-promo"><i class="fas fa-info-circle"></i> Info Selengkapnya</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card-promo mb-3" style="max-width: 540px;">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="Assets/promo3.png" class="card-img mt-2 mb-2" alt="">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="card-title-promo" style="font-size: 23px;"><i class="fas fa-tags"></i> Promo Lebaran</h4>
-                                    <p class="card-text-promo" style="font-size: 15px;">Rayakan Hari Spesial Anda dengan pilihan paket terbaik dari kami!</p>
-                                    <button type="button" class="btn btn-warning btn-lg btn-promo"><i class="fas fa-info-circle"></i> Info Selengkapnya</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+   
     <!-- TESTIMONI -->
     <div class="testimonials-section" id="testimoni">
         <h2 class="mbr-section-title display-2 mbr-bold text-center">Testimoni</h2>
