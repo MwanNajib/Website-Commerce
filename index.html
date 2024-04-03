@@ -18,13 +18,10 @@
 
     <!--  -->
     <style>
-        .custom-navbar {
-            background-color: yellow;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
+        .navbar-nav a {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 400;
         }
 
         .footer {
@@ -368,28 +365,36 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-        <div class="container-fluid justify-content-center">
+    <!-- navbar    -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #FFFF00;">
+        <div class="container">
+            <a class="navbar-brand" href=""><span> <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVfWP5-IBamy8viuKSVFt77zSuOcgEdP1VLQTc_Ee3&s"
+                        height="40" alt="" style="border: 2px solid rgb(0, 0, 0);"></span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
                         <a class="nav-link" href="#heroes">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about-us">Tentang</a>
+                        <a class="nav-link" href="#about-us">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#promo">Promo</a>
+                        <a class="nav-link" href="#layanan-kami">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sproduct">Produk</a>
+                        <a class="nav-link" href="#sproduct">Product</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#testimoni">Testimoni</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#layanan-kami">Layanan</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
