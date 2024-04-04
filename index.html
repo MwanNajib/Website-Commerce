@@ -14,11 +14,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-
-    <!--  -->
     <style>
-
         .navbar-nav a {
             font-size: 14px;
             text-transform: uppercase;
@@ -29,8 +25,8 @@
             background-color: yellow;
         }
 
-                /* Hero Style */
-                #heroes {
+        /* Hero Style */
+        #heroes {
             background: linear-gradient(180deg, #FFFF00 0%, #ffffff 100%);
             transition: 0.5s ease-in-out;
             padding: 100px 0;
@@ -46,8 +42,8 @@
             position: relative;
             height: 550px;
         }
-s
-        .parallax-img {
+
+        s .parallax-img {
             width: 100%;
             transition: transform 0.5s ease;
             border-radius: 10px;
@@ -61,70 +57,71 @@ s
         h1 {
             color: #333;
             white-space: nowrap;
-            overflow: hidden; 
-            text-overflow: clip; 
-            max-width: 100%; 
+            overflow: hidden;
+            text-overflow: clip;
+            max-width: 100%;
         }
 
         .order-btn {
-    background-color: #ffc107;
-    color: #333;
-    border: none;
-    transition: all 0.3s ease;
-}
+            background-color: #ffc107;
+            color: #333;
+            border: none;
+            transition: all 0.3s ease;
+        }
 
-.order-btn:hover {
-    background-color: #ffca28; 
-    transform: scale(1.05); 
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-}
+        .order-btn:hover {
+            background-color: #ffca28;
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
 
-        /* PROMO */   
-    #promo {
-        background-color: #ffffff; 
-        padding: 60px 0; 
-    }
+        /* PROMO */
+        #promo {
+            background-color: #ffffff;
+            padding: 60px 0;
+        }
 
-    .card-promo {
-        border: none; 
-        border-radius: 10px;
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); 
-        transition: all 0.3s ease; 
-    }
+        .card-promo {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
 
-    .card-promo:hover {
-        transform: translateY(-5px); 
-        box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
-        border-color: #ffc107;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        transition: border-color 0.3s ease, box-shadow 0.3s ease; 
-    }
+        .card-promo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+            border-color: #ffc107;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .card-title-promo {
-        color: #212529; 
-        font-weight: bold; 
-        margin-bottom: 15px; 
-    }
+        .card-title-promo {
+            color: #212529;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
 
-    .card-text-promo {
-        color: #6c757d; 
-        margin-bottom: 20px; 
-    }
+        .card-text-promo {
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
 
-    .btn-promo {
-        background-color: #ffc107; 
-        color: #212529;
-        border: none;
-        border-radius: 5px; 
-        padding: 10px 20px;
-        font-weight: bold;
-        transition: all 0.3s ease; 
-    }
+        .btn-promo {
+            background-color: #ffc107;
+            color: #212529;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
 
-    .btn-promo:hover {
-        background-color: #ffca2c; 
-        color: #212529; 
-    }
+        .btn-promo:hover {
+            background-color: #ffca2c;
+            color: #212529;
+        }
+
         /* FAQ */
         .accordion {
             --bs-accordion-btn-bg: #ffff00;
@@ -136,7 +133,7 @@ s
 
         .accordion-button {
             font-weight: bold;
-            
+
         }
 
         .carousel-item img {
@@ -407,11 +404,37 @@ s
         #layanan-kami .card:hover {
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
         }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .shake {
+            animation: shake 0.5s;
+        }
     </style>
 </head>
 
 <body>
-    <!-- navbar    -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #FFFF00;">
         <div class="container">
             <a class="navbar-brand" href=""><span> <img
@@ -454,29 +477,33 @@ s
             <div class="row flex-lg-row-reverse align-items-center g-5">
                 <div class="col-10 col-sm-8 col-lg-6">
                     <div class="parallax-wrapper">
-                        <img src="Assets/makaroni.png" class="d-block mx-lg-auto img-fluid parallax-img" alt="makaroni" width="600" height="950" loading="lazy">
+                        <img src="Assets/makaroni.png" class="d-block mx-lg-auto img-fluid parallax-img" alt="makaroni"
+                            width="600" height="950" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <h1 class="display-5 fw-bold lh-3 mb-3" style="font-size: 65px; letter-spacing: 3px;">MAKARONI</h1>
                     <h1 class="display-5 fw-bold lh-3 mb-3" style="font-size: 65px;">KAPOK-KAPOK</h1>
                     <p class="lead" style="font-size: 17px; color: #666;"><i>Rasa Asli, kelezatan tak tertandingi.
-                        Makaroni Kapok-kapok akan membuat Anda ketagihan terus menerus!!!</i></p>
-                        <p class="lead" style="font-size: 22px; color: #666;">Nikmati Kebahagiaan dalam Setiap Gigitan dengan Makaroni Kapok-Kapok. Di Mana Setiap Gigitan Membawa Kesenangan!</p>
-                    
-                        
+                            Makaroni Kapok-kapok akan membuat Anda ketagihan terus menerus!!!</i></p>
+                    <p class="lead" style="font-size: 22px; color: #666;">Nikmati Kebahagiaan dalam Setiap Gigitan
+                        dengan Makaroni Kapok-Kapok. Di Mana Setiap Gigitan Membawa Kesenangan!</p>
+
+
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start align-items-center">
-                        <button type="button" class="btn btn-warning btn-lg px-7 py-3 me-md-2 order-btn"><i class="fas fa-shopping-cart me-2"></i>Tentang Kami</button>
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-7 py-3 me-md-2 promo-btn"><i class="fas fa-truck me-2"></i></i>Pesan Produk</button>
+                        <button type="button" class="btn btn-warning btn-lg px-7 py-3 me-md-2 order-btn"><i
+                                class="fas fa-shopping-cart me-2"></i>Tentang Kami</button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg px-7 py-3 me-md-2 promo-btn"><i
+                                class="fas fa-truck me-2"></i></i>Pesan Produk</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
     <!-- END HEROES -->
 
-     <!-- PROMO -->
-     <section id="promo" class="py-5">
+    <!-- PROMO -->
+    <section id="promo" class="py-5">
         <div class="container">
             <h2 class="mbr-section-title display-2 mbr-bold text-center">Promo Spesial</h2>
             <div class="row">
@@ -488,10 +515,13 @@ s
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h4 class="card-title-promo" style="font-size: 23px;"><i class="fas fa-tags"></i> Promo Lebaran</h4>
-                                    <p class="card-text-promo" style="font-size: 15px;">Rayakan Hari-Hari Spesial dengan Keseruan Lezat! 
+                                    <h4 class="card-title-promo" style="font-size: 23px;"><i class="fas fa-tags"></i>
+                                        Promo Lebaran</h4>
+                                    <p class="card-text-promo" style="font-size: 15px;">Rayakan Hari-Hari Spesial dengan
+                                        Keseruan Lezat!
                                         Dapatkan Penawaran Istimewa untuk Makaroni Kapok-Kapok di Setiap Momennya.</p>
-                                    <button type="button" class="btn btn-warning btn-lg btn-promo"><i class="fas fa-info-circle"></i> Info Selengkapnya</button>
+                                    <button type="button" class="btn btn-warning btn-lg btn-promo"><i
+                                            class="fas fa-info-circle"></i> Info Selengkapnya</button>
                                 </div>
                             </div>
                         </div>
@@ -505,10 +535,13 @@ s
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h4 class="card-title-promo" style="font-size: 23px;"><i class="fas fa-tags"></i> Promo Lebaran</h4>
-                                    <p class="card-text-promo" style="font-size: 15px;">Rayakan Hari-Hari Spesial dengan Keseruan Lezat! 
+                                    <h4 class="card-title-promo" style="font-size: 23px;"><i class="fas fa-tags"></i>
+                                        Promo Lebaran</h4>
+                                    <p class="card-text-promo" style="font-size: 15px;">Rayakan Hari-Hari Spesial dengan
+                                        Keseruan Lezat!
                                         Dapatkan Penawaran Istimewa untuk Makaroni Kapok-Kapok di Setiap Momennya.</p>
-                                    <button type="button" class="btn btn-warning btn-lg btn-promo"><i class="fas fa-info-circle"></i> Info Selengkapnya</button>
+                                    <button type="button" class="btn btn-warning btn-lg btn-promo"><i
+                                            class="fas fa-info-circle"></i> Info Selengkapnya</button>
                                 </div>
                             </div>
                         </div>
@@ -679,7 +712,7 @@ s
         </div>
     </section>
 
-   
+
     <!-- TESTIMONI -->
     <div class="testimonials-section" id="testimoni">
         <h2 class="mbr-section-title display-2 mbr-bold text-center">Testimoni</h2>
@@ -975,7 +1008,7 @@ s
                             style="width: 65px; "></a>
                     <a href="#" class="social-icon"><img src="https://i.ibb.co/dGD1q1t/sosmed1.png" alt="Instagram"
                             style="width: 65px;"></a>
-                            <h1><br><br>_ </h1>
+                    <h1><br><br>_ </h1>
                 </div>
             </div>
             <br>
@@ -1029,13 +1062,15 @@ s
                         <h5>Menu</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#about-us" class="nav-link p-0 text-muted">Tentang Kami</a>
+                            <li class="nav-item mb-2"><a href="#about-us" class="nav-link p-0 text-muted">Tentang
+                                    Kami</a>
                             </li>
                             <li class="nav-item mb-2"><a href="#promo" class="nav-link p-0 text-muted">Promo</a></li>
                             <li class="nav-item mb-2"><a href="#produk" class="nav-link p-0 text-muted">Produk</a></li>
                             <li class="nav-item mb-2"><a href="#testimoni" class="nav-link p-0 text-muted">Testimoni</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="#layanan-kami" class="nav-link p-0 text-muted">Layanan Kami</a>
+                            <li class="nav-item mb-2"><a href="#layanan-kami" class="nav-link p-0 text-muted">Layanan
+                                    Kami</a>
                             </li>
                             <li class="nav-item mb-2"><a href="#faq" class="nav-link p-0 text-muted">FAQ</a></li>
                         </ul>
@@ -1043,15 +1078,19 @@ s
                     <div class="col-6 col-md-2 mb-3">
                         <h5>Social Media</h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="instagram.com/kapok.kapok"
+                            <li class="nav-item mb-2"><a href="https://www.instagram.com/kapok.kapok/"
                                     class="nav-link p-0 text-muted">Instagram</a></li>
                             <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-muted">TikTok</a></li>
-                            <li class="nav-item mb-2"><a href="facebook.com/kapokkapokmakaroni"
+                            <li class="nav-item mb-2"><a href="https://web.facebook.com/kapokkapokmakaroni?locale=id_ID"
                                     class="nav-link p-0 text-muted">Facebook</a></li>
-                            <li class="nav-item mb-2"><a href="wa.me/6281317806096" class="nav-link p-0 text-muted">WA</a></li>
-                            <li class="nav-item mb-2"><a href="https://shopee.co.id/kapok.kapok?smtt=0.0.9" class="nav-link p-0 text-muted">Shopee</a></li>
-                            <li class="nav-item mb-2"><a href="https://s.lazada.co.id/s.5wmnc" class="nav-link p-0 text-muted">Lazada</a></li>
-                            <li class="nav-item mb-2"><a href="https://www.tokopedia.com/kapok-kapok" class="nav-link p-0 text-muted">Tokopedia</a></li>
+                            <li class="nav-item mb-2"><a href="wa.me/6281317806096"
+                                    class="nav-link p-0 text-muted">WA</a></li>
+                            <li class="nav-item mb-2"><a href="https://shopee.co.id/kapok.kapok?smtt=0.0.9"
+                                    class="nav-link p-0 text-muted">Shopee</a></li>
+                            <li class="nav-item mb-2"><a href="https://s.lazada.co.id/s.5wmnc"
+                                    class="nav-link p-0 text-muted">Lazada</a></li>
+                            <li class="nav-item mb-2"><a href="https://www.tokopedia.com/kapok-kapok"
+                                    class="nav-link p-0 text-muted">Tokopedia</a></li>
                         </ul>
                     </div>
 
