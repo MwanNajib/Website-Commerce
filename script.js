@@ -31,6 +31,12 @@ $(document).ready(function () {
     });
 
 });
+document.getElementById('see-more-btn').addEventListener('click', function() {
+    document.querySelectorAll('.produk-container .box:nth-child(n+5)').forEach(function(box) {
+        box.style.display = 'grid';
+    });
+    this.style.display = 'none'; 
+});
 
 document.querySelector('.order-btn').addEventListener('click', function () {
     document.querySelector('#order-section').scrollIntoView({
